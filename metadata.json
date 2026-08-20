@@ -1,0 +1,6 @@
+{
+  "name": "Holiday Planners - Travel & Tour Agency",
+  "description": "Premium travel and tour booking platform replicating the Holiday Planners template with tour packages, destinations, reviews, and interactive reservations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
