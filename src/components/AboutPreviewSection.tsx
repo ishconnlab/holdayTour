@@ -22,22 +22,22 @@ export const AboutPreviewSection: React.FC<AboutPreviewSectionProps> = ({ onNavi
             <div className="relative w-full max-w-[480px] h-[380px] sm:h-[450px]">
               
               {/* Top/Back Image with dark frame */}
-              <div className="absolute top-0 right-0 w-[78%] h-[74%] border-4 border-[#161616] shadow-xl rounded-xs overflow-hidden z-10">
+              <div className="absolute top-0 right-0 w-[78%] h-[74%] border-4 border-[#161616] shadow-xl rounded-xs overflow-hidden z-10 bg-gray-100">
                 <img
-                  src="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85"
                   alt="Modern travel architecture"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
 
               {/* Bottom/Front Overlapping Image with gold frame */}
-              <div className="absolute bottom-0 left-0 w-[62%] h-[65%] border-4 border-[#c29958] shadow-2xl rounded-xs overflow-hidden z-20">
+              <div className="absolute bottom-0 left-0 w-[62%] h-[65%] border-4 border-[#c29958] shadow-2xl rounded-xs overflow-hidden z-20 bg-gray-100">
                 <img
-                  src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=80"
+                  src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=900&q=85"
                   alt="Traveler with luggage"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
 
