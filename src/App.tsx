@@ -20,7 +20,6 @@ import { Footer } from './components/Footer';
 import { TourListingPage } from './components/TourListingPage';
 
 import {
-  QuickSearchModal,
   TourDetailModal,
   DestinationModal,
   BlogArticleModal
@@ -31,7 +30,6 @@ export default function App() {
   const [tourFilter, setTourFilter] = useState<string>('All');
 
   // Modals state
-  const [isQuickSearchOpen, setIsQuickSearchOpen] = useState(false);
   const [selectedTourDetail, setSelectedTourDetail] = useState<Tour | null>(null);
   const [selectedDestinationDetail, setSelectedDestinationDetail] = useState<Destination | null>(null);
   const [selectedBlogPost, setSelectedBlogPost] = useState<BlogPost | null>(null);
@@ -52,13 +50,6 @@ export default function App() {
     } else {
       setTourFilter('All');
     }
-    setCurrentPage('tour');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  // Direct Search Modal Submit
-  const handleQuickSearch = (query: string) => {
-    setTourFilter(query);
     setCurrentPage('tour');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -89,7 +80,7 @@ export default function App() {
       <Header
         currentPage={currentPage}
         onNavigate={handleNavigate}
-        onOpenSearch={() => setIsQuickSearchOpen(true)}
+        onOpenSearch={() => handleNavigate('tour')}
         onOpenReserve={handleOpenGeneralReserve}
       />
 
@@ -159,12 +150,6 @@ export default function App() {
       <Footer currentPage={currentPage} onNavigate={handleNavigate} />
 
       {/* 4. Interactive Modals */}
-      <QuickSearchModal
-        isOpen={isQuickSearchOpen}
-        onClose={() => setIsQuickSearchOpen(false)}
-        onSearch={handleQuickSearch}
-      />
-
       <TourDetailModal
         tour={selectedTourDetail}
         onClose={() => setSelectedTourDetail(null)}
